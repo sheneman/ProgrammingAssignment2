@@ -4,7 +4,7 @@
 ## Luke Sheneman
 ## sheneman@uidaho.edu
 ##
-## This file contains two functions which cache the inverse of a matrix.
+## This file contains two functions which work together to cache the inverse of a matrix.
 ##
 
 ## makeCacheMatrix() -- 
