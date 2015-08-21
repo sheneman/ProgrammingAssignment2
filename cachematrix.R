@@ -1,42 +1,60 @@
 ## Cached Matrix Functions
 ##
 ## Programming in R - Programming Assignment #2
+## Luke Sheneman
+## sheneman@uidaho.edu
 ##
 ## This file contains two functions which cache the inverse of a matrix.
 ##
 
-## makeCacheMatrix() is a function which creates a special matrix object
-## that is able to store a cache of the inverse of the matrix
+## makeCacheMatrix() -- 
+## 
+## This function creates a special matrix object that defines a set of sub-functions that
+## is able to store a matrix and a cache of the inverse of that matrix
 makeCacheMatrix <- function(x = matrix()) {
   
+  ## initialize the inverse matrix if this function is called directly
   inverse_matrix <- NULL
   
+  ## set() is a function that sets the value of the actual initial (un-inverted) matrix
   set <- function(y) {
-    message("in makeCacheMatrix.set() --")
-    x <<- y
-    inverse_matrix <<- NULL
+    
+    message("in makeCacheMatrix.set() --")   ## some debugging information
+    
+    ## set the uninverted matrix (x) in the parent namesepace equal to the given matrix (y)
+    x <<- y  
+    
+    ## since we are setting a new initial matrix, lets initialize the inverse_matrix
+    inverse_matrix <<- NULL   
   } 
   
+  
+  ## get() is a function that simply returns the basic uninverted matrix
   get <- function() {
-    message("in makeCacheMatrix.get() --")
+    message("in makeCacheMatrix.get() --")   ## some debugging information
     x
   }
   
+  ## setinverse() is a function that sets the cached inverted matrix
   setinverse <- function(i) {
-    message("in makeCacheMatrix.setinverse() --")
+    message("in makeCacheMatrix.setinverse() --")  ## some debugging information
     inverse_matrix <<- i
   }
   
+  ## getinverse() is a function that returns the cached inverted matrix
   getinverse <- function() {
-    message("in makeCacheMatrix.getinverse() -")
+    message("in makeCacheMatrix.getinverse() -")  ## some debugging information
     inverse_matrix
   }
   
+  ## return a list of the sub-functions
   list(set = set,
        get = get,
        setinverse = setinverse,
        getinverse = getinverse)
 }
+
+
 
 
 ## cacheSolve() is a function which computes the inverse of the special
