@@ -1,4 +1,4 @@
-
+ 
 > source('~/coursera/ProgrammingAssignment2/cachematrix.R')
 > test_it()
 Testing the Matrix Inverse Caching Functions
