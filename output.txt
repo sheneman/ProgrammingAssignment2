@@ -1,0 +1,27 @@
+
+> source('~/coursera/ProgrammingAssignment2/cachematrix.R')
+> test_it()
+Testing the Matrix Inverse Caching Functions
+THE INITIAL, UNINVERTED MATRIX:
+     [,1] [,2] [,3]
+[1,]    1    0    5
+[2,]    2    1    6
+[3,]    3    4    0
+Calling makeCacheMatrix() for the FIRST time
+ACTUALLY COMPUTING THE INVERTED THE MATRIX
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+Calling makeCacheMatrix() for the SECOND time
+GETTING CACHED INVERTED MATRIX
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+Calling makeCacheMatrix() for the THIRD time
+GETTING CACHED INVERTED MATRIX
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
